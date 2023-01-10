@@ -6,6 +6,7 @@ const path = require("path");
 const configViewEngine = require("./config/viewEngine");
 const webRoute = require("./routes/web");
 const connection = require("./config/database");
+
 // config
 configViewEngine(app);
 app.use(express.json());
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", webRoute);
 
+connection();
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
