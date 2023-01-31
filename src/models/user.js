@@ -1,8 +1,12 @@
 const mongoose = require("mongoose");
-const kittySchema = new mongoose.Schema({
-  Email: String,
-  Name: String,
-  City: String,
+
+//shape data
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  city: String,
 });
-const user = mongoose.model("user", kittySchema);
-module.exports = user;
+
+const User = mongoose.model("user", userSchema);
+
+module.exports = User;

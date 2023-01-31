@@ -9,7 +9,7 @@ const dbState = [
 ];
 const connection = async () => {
   try {
-    await mongoose.connect("mongodb://root:123456@localhost:27017", {
+    await mongoose.connect("mongodb://root:123456@localhost:27018", {
       dbName: "hoidanit",
     });
     const state = Number(mongoose.connection.readyState);
